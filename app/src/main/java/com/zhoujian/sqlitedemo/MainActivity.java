@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity
                     // 插入第三条数据
                     values.put("name", "疯狂Android讲义");
                     values.put("author", "李刚");
-                    values.put("pages", 5810);
+                    values.put("pages", 580);
                     values.put("price", 85);
                     mDb.insert("Book", null, values);
 
