@@ -10,6 +10,11 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
 
     private Context mContext;
 
+    //integer：表示整型
+    //text:表示文本型
+    //real:表示浮点型
+    //blob:表示二进制类型
+
     public static final String CREATE_BOOK = "create table Book ("
             + "id integer primary key autoincrement, "
             + "author text, "
@@ -39,6 +44,8 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+
+        //当数据库升级的时候，如果表存在，会先删除表，然后重新创建
         db.execSQL("drop table if exists Book");
         db.execSQL("drop table if exists Category");
         onCreate(db);

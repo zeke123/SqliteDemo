@@ -43,6 +43,10 @@ public class MainActivity extends AppCompatActivity
         mCreateDatabase.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                //getReadableDatabase():如果磁盘已满，将以只读的方式打开数据库
+                //getWritableDatabase():如果磁盘已满，将出现异常
+
                 mDb = dbHelper.getWritableDatabase();
             }
         });
