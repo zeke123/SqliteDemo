@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        dbHelper = new MyDatabaseHelper(this, "BookStore.db", null, 1);
+        dbHelper = new MyDatabaseHelper(this, "Book.db", null, 1);
         initViews();
         clickEvents();
     }
