@@ -13,8 +13,6 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity
 {
 
-    //https://github.com/zeke123/SqliteDemo.git
-
     private MyDatabaseHelper dbHelper;
     private SQLiteDatabase mDb;
     private Button mCreateDatabase;

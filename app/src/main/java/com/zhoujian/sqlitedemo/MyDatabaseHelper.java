@@ -7,6 +7,9 @@ import android.widget.Toast;
 
 public class MyDatabaseHelper extends SQLiteOpenHelper {
 
+
+    private Context mContext;
+
     public static final String CREATE_BOOK = "create table Book ("
             + "id integer primary key autoincrement, "
             + "author text, "
@@ -19,7 +22,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
             + "category_name text, "
             + "category_code integer)";
 
-    private Context mContext;
+
 
     public MyDatabaseHelper(Context context, String name,
                             SQLiteDatabase.CursorFactory factory, int version) {
